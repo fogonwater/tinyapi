@@ -6,7 +6,6 @@ from flask.ext import restful
 app = Flask(__name__)
 api = restful.Api(app)
 
-
 class DiceSingle(restful.Resource):
     def get(self, num_sides):
         results = [ randint(1, num_sides) ]
@@ -28,9 +27,9 @@ class DiceMulti(restful.Resource):
             'total': sum(results),
         }
 
+
 api.add_resource(DiceSingle, '/dice/<int:num_sides>')
 api.add_resource(DiceMulti, '/dice/<int:num_sides>/<int:num_rolls>')
-
 
 if __name__ == '__main__':
     app.run(debug=True)
