@@ -8,12 +8,12 @@ There are two styles of GET call.
 /dice/<num_sides>/<num_rolls>
 ```
 
-Roll one six-sided dice.
+e.g. roll one six-sided dice.
 ```
 http://127.0.0.1:5000/dice/6
 ```
 
-Roll three six-sided die.
+e.g. roll three six-sided die.
 ```
 http://127.0.0.1:5000/dice/6/3
 ```
